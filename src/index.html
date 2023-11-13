@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Bookshelf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <load ="partials/header.html" />
+    <main>
+      <load ="partials/home.html" />
+      <load ="partials/category-list.html" />
+      <load ="partials/support-ua.html" />
+      <load ="partials/best-sellers.html" />
+      <load ="partials/scrollBtn.html" />
+    </main>
+    <load ="partials/footer.html" />
 
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/index.js"></script>
   </body>
 </html>
