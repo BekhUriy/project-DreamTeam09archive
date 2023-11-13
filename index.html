@@ -4,76 +4,285 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/project-DreamTeam09/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Bookshelf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     
     <script type="module" crossorigin src="/project-DreamTeam09/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-DreamTeam09/assets/index-10c40100.css">
+    <link rel="modulepreload" crossorigin href="/project-DreamTeam09/assets/vendor-26fe51b3.js">
+    <link rel="stylesheet" href="/project-DreamTeam09/assets/styles-10c40100.css">
   </head>
   <body>
     <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/project-DreamTeam09/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
+<div class="header-container">
+    
+    
+        <a href="" class="header-logo-link">
+            <svg class="header-logo" width="24" height="24">
+                <use href="./img/sprit.svg#icon-logo" />
+            </svg>
+    
+            <svg class="header-logo" width="77.001" height="13.266">
+                <use href="./img/sprit.svg#icon-bookshelf" />
+            </svg>
+        </a>
+    <nav class="header-nav">
+        <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="./home.html" class="header-nav-link js-home-link">home</a></li>
+            <li class="header-nav-item"><a href="./rent-block.html" class="header-nav-link js-shopping-link">shopping list <svg class="header-logo" width="24" height="24">
+                <use href="./img/sprit.svg#icon-bag" />
+            </svg>
+          </a>
         </li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/project-DreamTeam09/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+    <div class="header-btns">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider round"></span>
+      </label>
+
+        <!-- <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label> -->
+
+        
+        <button class="modal-open-btn">
+            <svg class="open-icon" width="28" height="28">
+                <use href="./img/sprit.svg#icon-burger" />
+            </svg>
+        </button>
+    </div>
+  </div>
+
+  <div class="header-modal hidden-modal">
+    <ul class="header-modal-list">
+        <li class="modal-home-btn"><a href="./index.html">HOME</a></li>
+        <li class="modal-shop-btn">
+          <a href="./shoping-list.html" class="modal-shop-link">SHOPPING LIST
+            <span>
+              <svg class="modal-shop-icon" width="20" height="20">
+                <use href="./img/sprit.svg#modalshopicon" />
+              </svg>
+            </span>
+          </a> 
+            
+            
+            
+        </li>
+    </ul>
+    <div class="modal-stephan">
+      <div class="user-img">
+        <img src="./img/stephan.jpg" alt="St">
+      </div>
+      <p class="user-name">Stephan</p>
+     
+    </div>
+    <div class="modal-gallery">
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+          <img src="./img/imageA.jpg" alt="" class='modal-gallery-img'>
+         
+
+    </div>
+    <!-- <div class="logout-btn">
+      <svg class="logout-btn-icon" width="20" height="20">
+        <use href="./img/btn.svg" />
+      </svg> -->
+      
+
+    </div>
+  </div>
+  
+</header>
+    <main>
+      <section class="vite-promo">
+    <!-- + Categories list
+         + Support Ukraine block -->
+    <!--Best sellers-->
+<div class="selected-category-list">
+  <h1 class="home-page-title">
+    Best Sellers <span class="home-page-title-accent">Books</span>
+  </h1>
+  <ul class="best-sellers-books">
+    <!--<li></li>
+      <li>
+        <p class="category-title"></p>
+        <ul class="best-sellers-by-category">
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+        </ul>
+        <button type="button">See more</button>
+        </li>-->
+  </ul>
+</div>
+
+</section>
+      <div class="category-container">
+    <ul class="category">
+        <li><a href="#" target="_self" class="genre active">All categories</a></li>
+    </ul>
+</div>
+      <div class="donation">
+    <div class="support-header">
+        <div>
+            <h2 class="header-text">Support Ukraine</h2>
+        </div>
+        <img src="./img/support-ua/coat-of-arms.png" alt="coat of arms of Ukraine"
+            srcset="./img/support-ua/coat-of-arms.png 1x, ./img/support-ua/coat-of-arms@2x.png">
+    </div>
+    <ol class="fonds">
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis"
+                target="_blank" rel="noopener noreferrer">
+                <div class="num-order">01</div>
+                <img src="./img/support-ua/save.png" height="32" alt="Save the Children"
+                    srcset="./img/support-ua/save.png 1x, ./img/support-ua/save@x2.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://www.projecthope.org/country/ukraine/" target="_blank"
+                rel="noopener noreferrer">
+                <div class="num-order">02</div>
+                <img src="./img/support-ua/hope.png" alt="Project HOPE" height="32"
+                    srcset="./img/support-ua/hope.png 1x, ./img/support-ua/hope@2x.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://internationalmedicalcorps.org/country/ukraine/" target="_blank"
+                rel="noopener noreferrer">
+                <div class="num-order">03</div>
+                <img src="./img/support-ua/imc.png" height="32" alt="International Medical Corps"
+                    srcset="./img/support-ua/imc.png 1x, ./img/support-ua/imc@2x.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://www.razomforukraine.org/" target="_blank" rel="noopener noreferrer">
+                <div class="num-order">04</div>
+                <img src="./img/support-ua/razom.png" alt="RAZOM"
+                    srcset="./img/support-ua/razom.png 1x, ./img/support-ua/razom@2x.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://www.actionagainsthunger.org/location/europe/ukraine/" target="_blank"
+                rel="noopener noreferrer">
+                <div class="num-order">05</div>
+                <img src="./img/support-ua/aahunger.png" alt="Action against hunger"
+                    srcset="./img/support-ua/aahunger.png 1x, ./img/support-ua/aahunger@2x.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://prytulafoundation.org/en" target="_blank" rel="noopener noreferrer">
+                <div class="num-order">06</div>
+                <img src="./img/support-ua/prytula.png" alt="Serhiy Prytula Charity Foundation"
+                    srcset="./img/support-ua/prytula.png 1x, ./img/support-ua/prytula@2x.png">
+            </a>
+        </li>
+        <li class="fonds-elm"><a class="fonds-link" href="https://www.msf.org/ukraine" target="_blank"
+                rel="noopener noreferrer">
+                <div class="num-order">07</div>
+                <img src="./img/support-ua/medsfront.png" alt="Medicins Sans Frontieres"
+                    srcset="./img/support-ua/medsfront.png 1x, ./img/support-ua/medsfront@2x.png 2x">
+            </a></li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://www.wvi.org/emergencies/ukraine" target="_blank"
+                rel="noopener noreferrer">
+                <div class="num-order">08</div>
+                <img src="./img/support-ua/worldvision.png" alt="World vision"
+                    srcset="./img/support-ua/worldvision.png 1x, ./img/support-ua/worldvision@2x.png 2x">
+            </a>
+        </li>
+        <li class="fonds-elm">
+            <a class="fonds-link" href="https://u24.gov.ua/uk" target="_blank" rel="noopener noreferrer">
+                <div class="num-order">09</div>
+                <img src="./img/support-ua/united.png" alt="UNITED24"
+                    srcset="./img/support-ua/united.png 1x, ./img/support-ua/united@2x.png 2x">
+            </a>
+        </li>
+    </ol>
+
+    <div class="center">
+        <button type="button" class="nav-btn">
+            <svg class="icon icon-down" width="22" height="22">
+                <use href="./img/support-ua/icon.svg#icon-down"> </use>
+            </svg>
+            <svg class="icon icon-up is-hidden" width="22" height="22">
+                <use href="./img/support-ua/#icon-up"> </use>
+            </svg>
+        </button>
+    </div>
+</div>
+      <!--Best sellers-->
+<div class="selected-category-list">
+  <h1 class="home-page-title">
+    Best Sellers <span class="home-page-title-accent">Books</span>
+  </h1>
+  <ul class="best-sellers-books">
+    <!--<li></li>
+      <li>
+        <p class="category-title"></p>
+        <ul class="best-sellers-by-category">
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+          <li class="best-sellers-book" data-book-id="">
+            <img class="best-sellers-book-img" src="" alt="" />
+            <p class="best-sellers-book-title"></p>
+            <p class="best-sellers-book-author"></p>
+          </li>
+        </ul>
+        <button type="button">See more</button>
+        </li>-->
+  </ul>
+</div>
+
+      <button class="scrollBtn scrollBtn-hide" type="button">UP</button>
+    </main>
+    <section class="section footer_section">
+  <div
+    class="container footer_container footer_container_shop footer_container_group"
+  >
+    <div class="footer_wrapper">
+      <p class="footer_text_left">© 2023 | All Rights Reserved |</p>
+      <p class="footer_text_right">
+        Developed by GoIt DreamTeam</a>
+      </p>
     </div>
   </div>
 </section>
