@@ -1,91 +1,164 @@
-<div class="donation">
-    <div class="support-header">
-        <div>
-            <h2 class="header-text">Support Ukraine</h2>
-        </div>
-        <img src="./img/suport-ua/coat-of-arms.png" alt="coat of arms of Ukraine"
-            srcset="./img/suport-ua/coat-of-arms.png 1x, ./img/suport-ua/coat-of-arms@2x.png">
-    </div>
-    <ol class="fonds">
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis"
-                target="_blank" rel="noopener noreferrer">
-                <div class="num-order">01</div>
-                <img src="./img/suport-ua/save.png" height="32" alt="Save the Children"
-                    srcset="./img/suport-ua/save.png 1x, ./img/suport-ua/save@x2.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://www.projecthope.org/country/ukraine/" target="_blank"
-                rel="noopener noreferrer">
-                <div class="num-order">02</div>
-                <img src="./img/suport-ua/hope.png" alt="Project HOPE" height="32"
-                    srcset="./img/suport-ua/hope.png 1x, ./img/suport-ua/hope@2x.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://internationalmedicalcorps.org/country/ukraine/" target="_blank"
-                rel="noopener noreferrer">
-                <div class="num-order">03</div>
-                <img src="./img/suport-ua/imc.png" height="32" alt="International Medical Corps"
-                    srcset="./img/suport-ua/imc.png 1x, ./img/suport-ua/imc@2x.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://www.razomforukraine.org/" target="_blank" rel="noopener noreferrer">
-                <div class="num-order">04</div>
-                <img src="./img/suport-ua/razom.png" alt="RAZOM"
-                    srcset="./img/suport-ua/razom.png 1x, ./img/suport-ua/razom@2x.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://www.actionagainsthunger.org/location/europe/ukraine/" target="_blank"
-                rel="noopener noreferrer">
-                <div class="num-order">05</div>
-                <img src="./img/suport-ua/aahunger.png" alt="Action against hunger"
-                    srcset="./img/suport-ua/aahunger.png 1x, ./img/suport-ua/aahunger@2x.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://prytulafoundation.org/en" target="_blank" rel="noopener noreferrer">
-                <div class="num-order">06</div>
-                <img src="./img/suport-ua/prytula.png" alt="Serhiy Prytula Charity Foundation"
-                    srcset="./img/suport-ua/prytula.png 1x, ./img/suport-ua/prytula@2x.png">
-            </a>
-        </li>
-        <li class="fonds-elm"><a class="fonds-link" href="https://www.msf.org/ukraine" target="_blank"
-                rel="noopener noreferrer">
-                <div class="num-order">07</div>
-                <img src="./img/suport-ua/medsfront.png" alt="Medicins Sans Frontieres"
-                    srcset="./img/suport-ua/medsfront.png 1x, ./img/suport-ua/medsfront@2x.png 2x">
-            </a></li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://www.wvi.org/emergencies/ukraine" target="_blank"
-                rel="noopener noreferrer">
-                <div class="num-order">08</div>
-                <img src="./img/suport-ua/worldvision.png" alt="World vision"
-                    srcset="./img/suport-ua/worldvision.png 1x, ./img/suport-ua/worldvision@2x.png 2x">
-            </a>
-        </li>
-        <li class="fonds-elm">
-            <a class="fonds-link" href="https://u24.gov.ua/uk" target="_blank" rel="noopener noreferrer">
-                <div class="num-order">09</div>
-                <img src="./img/suport-ua/united.png" alt="UNITED24"
-                    srcset="./img/suport-ua/united.png 1x, ./img/suport-ua/united@2x.png 2x">
-            </a>
-        </li>
-    </ol>
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(var(--text-hover), #DCDCDC);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    bottom: 1px;
+    background-color: var(--background_l);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked+.slider {
+    background: linear-gradient(var(--text-hover), #686868);
+}
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.header-container {
+    display: flex;
+    padding: 18px 20px;
+    align-items: center;
+    border-radius: 0px 0px 8px 8px;
+    border: 1.5px solid var(--text);
+}
+@media only screen and (min-width: 768px) {
+    .header-container {
+        padding: 19px 32px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .header-container {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    /* gap: 8px; */
+    font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+    .header-logo-link {
+        margin-right: 40px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .header-logo-link {
+        margin-right: 76px;
+    }
+}
+.header-logo{
+    margin-right: 8px;
+}
+.header-nav {
+    display: none;
+    align-items: center;
+}
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+/* .header-nav-item:nth-child(2n) {
+display: flex;
+align-items: center;
+} */
+.header-nav-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header-nav-link {
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 36px;
+}
+/* .header-nav-link:hover,
+.header-nav-link:focus { 
+    background-color: var(--background_active);
+    font-weight: 700;
+} */
+@media only screen and (min-width: 768px) {
+    .header-nav {
+        display: flex;
+        gap: 24px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .modal-open-btn {
+        display: none;
+    }
+}
+.header-btns {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-left: auto;
+}
+.header-modal {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, var(--text-hover) 18.03%, var(--background_l) 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 183px;
+    align-items: center;
+    overflow: hidden;
+}
+.header-modal-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    width: 118px;
+    height: 70px;
+   
+    /* margin: 247px auto; */
+    /* padding-top: 183px;
+    padding-left: 129px; */
+}
 
-    <div class="center">
-        <button type="button" class="nav-btn">
-            <svg class="icon icon-down" width="22" height="22">
-                <use href="./img/suport-ua/icon.svg#icon-down"> </use>
-            </svg>
-            <svg class="icon icon-up is-hidden" width="22" height="22">
-                <use href="./img/suport-ua/#icon-up"> </use>
-            </svg>
-        </button>
-    </div>
+.modal-open-btn {
+    stroke: black;
+    margin-left: 14px;
+    padding: 0;
+    background-color: #FFF;
 
     
           
@@ -94,7 +167,129 @@
 
           
           Expand Down
+          
+            
     
+
+          
+          Expand Up
     
+    @@ -273,8 +274,9 @@ display: flex;
   
-</div>
+    border: 0;
+}
+.active{
+        padding: 7px 16px;
+        background-color: #EAC645;
+        border-radius: 50%;
+        font-weight: 700;
+}
+.hidden-modal {
+    display: none;
+}
+.modal-stephan{
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+}
+.user-img{
+    border-radius: 50px;
+    width: 37px;
+    height: 37px;
+    overflow: hidden;
+}
+.modal-stephan-img { 
+}
+.user-name {
+color: #FFFFFF;
+font-size: 22px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: -0.02em;
+text-align: left;
+  
+}
+.modal-home-btn {
+width: 72px;
+height: 34px;
+padding: 8px 16px;
+border-radius: 36px;
+background: #EAC645;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: -0.04em;
+text-align: left;
+}
+.modal-shop-btn {
+    width: 150px;
+    height: 20px;
+color: #FFFFFF;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: -0.04em;
+text-align: left;
+}
+.modal-shop-link {
+display: flex;
+gap: 4px;
+}
+.modal-shop-icon {
+stroke: #FFFFFF;
+
+
+}
+
+.modal-gallery {
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -308,4 +310,13 @@ border-radius: 8px;
+  
+position: absolute;
+width: 450px;
+height: 439px;
+top: 505px;
+left: -20px;
+border-radius: 8px;
+rotate: -15deg;
+opacity: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 30px;
+}
+.modal-gallery-img {
+width: 90px;
+height: 133px;
+border-radius: 8px;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+.logout-btn {
+    position: absolute;
+   width: 118px;
+   height: 48px;
+   background-color: #EAC645;
+   top: 300px;
+   left: 20px;
+
+}
